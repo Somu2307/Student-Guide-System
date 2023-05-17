@@ -20,9 +20,9 @@
 <nav class="shift">
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Questions</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="digitallibrary/digitallyb.html" target="_blank">Digital Library</a></li>
+        <li><a href="Question Paper/index.html" target="_blank">Questions</a></li>
+        <li><a href="Event Calendar/index.html" target="_blank">Event Calendar</a></li>
     </ul>
 </nav>
 <div class="section1">
@@ -43,29 +43,58 @@
     </div>
 </div>
 
+<!-- Script for CHATBOT -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="CollegeBot"
+  agent-id="3246cbae-f2ce-45e7-9341-e96b666aa25a"
+  language-code="en"
+></df-messenger>
+<!-- till here -->
+
 <div class="clgphoto2">
     <img src="clg2.jpg" class="clgbg2" alt="">
     <div class="about2">
-        <h1>HEADING</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus eligendi quos! Architecto modi repellendus dolor beatae, distinctio cum qui quaerat aut cumque praesentium commodi repellat illum numquam, optio nesciunt.</h2>
+        <h1>SCOPE</h1>
+        <h2>This engineering college offers state-of-the-art facilities and resources to its students, including well-equipped labs, advanced technology, and a dedicated faculty team, providing an immersive learning experience that prepares graduates for successful careers in the field.</h2>
     </div>     
 </div>
-<div class="slider-container">
+<!-- <div class="slider-container">
 <div class="slider">
     <img src="1.jpg" class="slide active">
     <img src="2.jpg" class="slide">
     <img src="3.jpg" class="slide">
     <img src="4.jpg" class="slide">
 </div> 
-</div>
+</div> -->
     
 
 <div class="clgphoto2">
     <img src="clg3.jpg" class="clgphoto" alt="">
+    <div class="feedback">
+        <form name="submit-to-google-sheet">
+            <input type="text" name= "Name" placeholder="Your Name" required>
+            <input type="email" name= "Email" placeholder="Your Email" required>
+            <textarea name="Feedback" rows="6" placeholder="Feedback"></textarea>
+            <button type="submit" class="btn btn2"><b>SUBMIT</b></button>
+        </form>
+    </div>
 </div>
 <div>
 
 </div>
 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyqCntRkD11dKJvWbbpsE-IYpPXWbByCOn-riueOdt66BDp6HOu8YzdSiVBAtdLaT28PA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>

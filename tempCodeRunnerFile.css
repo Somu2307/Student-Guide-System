@@ -1,0 +1,9 @@
+.about2{
+
+  color: #000000;
+  /* background-color: #0b0b89; */
+  border-radius: 5px;
+  border: 3px solid rgb(13, 13, 13);
+  width: 40vw;
+  backdrop-filter: blur(8px);
+}

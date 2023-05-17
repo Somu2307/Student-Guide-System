@@ -169,16 +169,22 @@ html {
     /* width: 34vw; */
     position: absolute;
     color: #ffffff;
-    border: solid 2px red;
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #121252;
   }
  .about2 h2{
     
-    top: -30vh;
+    top: -28vh;
     left: -40vw;
     width: 34vw;
     position: absolute;
     color: #000000;
-    border: solid 2px red;
+    border: solid 5px rgb(0, 0, 0);
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
   }
 /* 
   .slider {
@@ -285,4 +291,42 @@ html {
   100% {
     left: -400%;
   }
+}
+
+.feedback{
+  display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    background-color: 5px solid black;
+}
+
+.btn.btn2{
+  display:inline-block;
+  background: #ff004f;
+  padding: 10px;
+  border-radius: 5px;
+}
+.contact-right form{
+  width:100%
+}
+form input,form textarea{
+  width:100%;
+  border: 0;
+  outline: 0;
+ 
+  margin:15px;
+  padding:15px 0;
+  color:#000000;
+  
+  font-size:18px;
+  border-radius:6 px;
+  opacity: 0.5;
+  }
+form.btn2{
+  padding: 50px;
+  font-size:30 px;
+  margin-top:20px;
+  margin-left: 50px;
+  cursor:pointer;
 }

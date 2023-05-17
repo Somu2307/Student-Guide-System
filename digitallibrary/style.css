@@ -1,0 +1,65 @@
+ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  li.present {
+    background-color: green;
+  }
+  
+  li.not-present {
+    background-color: red;
+  }
+  /* Container to hold the search bar and the search button */
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style the search bar */
+  #search-input {
+    flex: 1; /* Take up remaining space */
+    padding: 12px 20px; /* Padding */
+    margin-right: 10px; /* Spacing between the search bar and the search button */
+    font-size: 16px; /* Font size */
+    border: 2px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Style the search button */
+  .search-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Add cursor on hover */
+  }
+  
+  .search-button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+    border-radius: 10%;
+  }
+  
+  body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}  
+
+.h1{
+    text-align: center;
+}
